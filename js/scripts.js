@@ -13,4 +13,25 @@ if (num === 0) {
 };
 $("#factorial-answer").text(answer);
 });
+
+
+
+
+$("form#palin").submit(function(event){
+  event.preventDefault();
+var string = $("#palinInput").val();
+var array = string.split('');
+var array2 = array.slice();
+array.reverse();
+  if (array.toString() === array2.toString())
+{ $("#palin-answer").text("palindrome");
+
+} else { $("#palin-answer").text("not a palindrome"); }
+});
+
+
+
+
+
+
 });
