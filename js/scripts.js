@@ -41,12 +41,11 @@ $("form#primeNum").submit(function(event){
 
 var usernum = parseInt($("#primeInput").val());
 var arrayPrime = [];
-var target = 1000;
-for (var index = 2; index <= target; index += 1) {
+for (var index = 2; index <= usernum; index += 1) {
   arrayPrime.push(index);
 }
 
-for (var prime = 2; prime <= target; prime += 1) {
+for (var prime = 2; prime <= usernum; prime += 1) {
 	for (var elem = arrayPrime.length; elem >= 1; elem -= 1) {
       if (parseInt(arrayPrime[elem]) % prime === 0 && prime != parseInt(arrayPrime[elem])) {
             var removed = arrayPrime.splice(elem, 1);
